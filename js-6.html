@@ -1,0 +1,52 @@
+<!--使用JS完成一个简单的计算器功能。实现2个输入框中输入整数后，点击第三个输入框能给出2个整数的加减乘除。
+
+提示：获取元素的值设置和获取方法为：例：赋值：document.getElementById(“id”）.value = 1； 取值：var = document.getElementById(“id”）.value；
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title> shijian</title>
+    <script type="text/javascript">
+        function count(){
+            var aa=parseInt(document.getElementById("txt1").value);
+            var bb=parseInt(document.getElementById("txt2").value)
+            var cc=document.getElementById("select").value;
+            var dd;
+
+            switch(cc)
+            {
+                case "+":
+                    dd=aa+bb;
+                    break;
+                case "-":
+                    dd=aa-bb;
+                    break;
+                case "*":
+                    dd=aa*bb;
+                    break;
+                case "/":
+                    dd=aa/bb;
+                    break;
+            }
+            document.getElementById("fruit").value=dd;
+            //获取第一个输入框的值
+            //获取第二个输入框的值
+            //获取选择框的值
+            //获取通过下拉框来选择的值来改变加减乘除的运算法则
+            //设置结果输入框的值
+        }
+    </script>
+</head>
+<body>
+<input type='text' id='txt1' />
+<select id='select'>
+    <option value='+'>+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+</select>
+<input type='text' id='txt2' />
+<input type='button' value=' = ' onclick="count()"/> <!--通过 = 按钮来调用创建的函数，得到结果-->
+<input type='text' id='fruit' />
+</body>
+</html>
