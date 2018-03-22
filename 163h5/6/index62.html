@@ -7,31 +7,159 @@
 <script src="jq/jquery-3.3.1.min.js"></script>
 <script>
 $(document).ready(function(){
-	$("#box img").mouseover(function(){
-		$(this).animate({left:"200px"},400)
+	$("#a1").mouseover(function(){
+	$("#a2,#a3,#a4").animate({left:"400px"},400)
+	$("#a5").show()
+    $("#a5").animate({width:'350px',opacity:'0.8'},"slow");
+//    $("#a2,#a3,#a4").hide(400)
 	})
+$("#a1").mouseout(function(){
+	$("#a2,#a3,#a4").show()
+	$("#a2").animate({left:"50px"},400)
+	$("#a3").animate({left:"100px"},400)
+	$("#a4").animate({left:"150px"},400)
+	$("#a5").animate({width:'0px',opacity:'0.8'},"fast");
+})
+	
+$("#a2").mouseover(function(){
+	$("#a3,#a4").animate({left:"400px"},400)
+	$("#a1").animate({left:"-50px"},400)
+	$("#a2").animate({left:"0px"},400)
+	$("#a5").show()
+	$("#a5").css("background","linear-gradient(to right,green,red)")
+    $("#a5").animate({width:'350px',opacity:'0.8'},"slow");
+	//$("#a1,#a3,#a4").hide(400)
+	})
+$("#a2").mouseout(function(){
+    $("#a1,#a3,#a4").show()
+  	$("#a1").animate({left:"0px"},400)
+	$("#a2").animate({left:"50px"},400)
+	$("#a3").animate({left:"100px"},400)
+	$("#a4").animate({left:"150px"},400)
+	$("#a5").animate({width:'0px',opacity:'0.8'},"fast");
+})
+	
+$("#a3").mouseover(function(){
+	$("#a1,#a2").animate({left:"-50px"},400)
+	$("#a4").animate({left:"400px"},400)
+	$("#a3").animate({left:"0px"},400)
+	$("#a5").show()
+	$("#a5").css("background","linear-gradient(to right,yellow,green)")
+    $("#a5").animate({width:'350px',opacity:'0.8'},"slow");
+	//$("#a1,#a2,#a4").hide(400)
+	})
+$("#a3").mouseout(function(){
+	$("#a1,#a2,#a4").show()
+	$("#a1").animate({left:"0px"},400)
+	$("#a2").animate({left:"50px"},400)
+	$("#a3").animate({left:"100px"},400)
+	$("#a4").animate({left:"150px"},400)
+	$("#a5").animate({width:'0px',opacity:'0.8'},"fast");
+})
+	
+$("#a4").mouseover(function(){
+	$("#a2,#a3,#a1").animate({left:"-50px"},400)
+	$("#a4").animate({left:"0px"},400)
+	$("#a5").show()
+	$("#a5").css("background","linear-gradient(to right,blue,green)")
+    $("#a5").animate({width:'350px',opacity:'0.8'},"slow");
+	//$("#a1,#a2,#a3").hide(400)
+	})
+$("#a4").mouseout(function(){
+	$("#a1,#a2,#a3").show()
+	$("#a1").animate({left:"0px"},400)
+	$("#a2").animate({left:"50px"},400)
+	$("#a3").animate({left:"100px"},400)
+	$("#a4").animate({left:"150px"},400)
+	$("#a5").animate({width:'0px',opacity:'0.8'},"fast");
+})
 })
 </script>
-
 <style>
 #box {
 	width: 400px;
-	height: 400px;
+	height: 50px;
 	border: 1px solid red;
 	margin: auto;
 	position: relative;
 }
 #box img {
 	position: absolute;
-	top: 40px;
-	left: 50px;
+	top: 0px;
+	left: 0px;
 	cursor: pointer;
+}
+
+#a1 {
+	background-color: red;
+	top: 0px;
+	left: 0px;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	border-radius: 50px;
+	text-align: center;
+	line-height: 40px;
+	margin: 0px;
+}
+#a2 {
+	background-color: green;
+	top: 0px;
+	left: 50px;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	border-radius: 50px;
+	text-align: center;
+	line-height: 40px;
+	margin: 0px;
+}
+#a3 {
+	background-color: yellow;
+	top: 0px;
+	left: 100px;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	border-radius: 50px;
+	text-align: center;
+	line-height: 40px;
+	margin: 0px;
+}
+#a4 {
+	background-color: blue;
+	top: 0px;
+	left: 150px;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	border-radius: 50px;
+	text-align: center;
+	line-height: 40px;
+	margin: 0px;
+	color: aliceblue;
+}
+#a5{
+	background:linear-gradient(to right, red , blue);
+	height:50px;
+	width:50px;
+	position:absolute;
+	margin: 0px;"
+	top: 0px;
+	left: 50px;
+	display: none;
 }
 </style>
 </head>
 
 <body>
-<div id="box"> <img src="img/coin11.gif"></div>
-
+<div id="box"> 
+  <!--	<img src="img/coin11.gif"><img id="aa1" src="img/coin10.gif">-->
+  <p id="a1">1</p>
+  <p id="a2">2</p>
+  <p id="a3">3</p>
+  <p id="a4">4</p>
+  <p id="a5"> </p>
+</div>
 </body>
 </html>
