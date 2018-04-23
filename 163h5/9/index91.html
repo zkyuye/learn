@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>您的购物清单</title>
+<style>
+table {
+	width: 800px;
+	margin: auto;
+	border-top: 3px solid #333;
+	border-bottom: 1px solid #333;
+	border-left: 1px solid #333;
+	border-right: 1px solid #333;
+	border-collapse: collapse;
+}
+table caption {
+	font: bold 1.8em/1.8 微软雅黑;
+}
+table tr {
+	border: 1px solid #E5DDDD;
+	height: 80px;
+}
+table td {
+	text-align: center;
+}
+table tfoot {
+}
+.aa1 {
+	height: 40px;
+}
+span {
+	font: bold 30px arial;
+	color: #DB3235
+}
+img {
+	cursor: pointer;
+	transition: all 0.6s;
+	height: 150px;
+	width: 150px;
+}
+img:hover {
+	transform: scale(1.2);
+}
+/*
+	transition: all 0.6s;表示所有的属性变化在0.6s的时间段内完成。
+
+transform: scale(1.4);表示在鼠标放到图片上的时候图片按比例放大1.4倍。
+*/
+</style>
+</head>
+
+<body>
+<table>
+  <caption>
+  您的购物清单
+  </caption>
+  <thead>
+    <tr class="aa1">
+      <th>图形</th>
+      <th>名称</th>
+      <th>单价</th>
+      <th>数量</th>
+      <th>小计</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>总价:<span>83</span></td>
+      <td><input type="button" value="去结算" style="height: 50px;width: 100px;background: #F34043;color: #FFFFFF;font: 25px 微软雅黑"></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td><img src="img/shui.png" alt=""></td>
+      <td>水杯</td>
+      <td>1000</td>
+      <td>1000</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <td><img src="img/lan.png" alt=""></td>
+      <td>篮子</td>
+      <td>1000</td>
+      <td>1000</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <td><img src="img/yu.png" alt=""></td>
+      <td>儿童浴袍</td>
+      <td>1000</td>
+      <td>1000</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <td><img src="img/tuo.png" alt=""></td>
+      <td>拖把</td>
+      <td>1000</td>
+      <td>1000</td>
+      <td>1000</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
